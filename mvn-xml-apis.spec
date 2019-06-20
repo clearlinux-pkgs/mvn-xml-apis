@@ -4,14 +4,14 @@
 #
 Name     : mvn-xml-apis
 Version  : 1.3.04
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
 Source0  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
 Source1  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom
 Source2  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : apache-2.0
+License  : Apache-2.0
 Requires: mvn-xml-apis-data = %{version}-%{release}
 
 %description
@@ -33,8 +33,11 @@ data components for the mvn-xml-apis package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
 
 
 %files
@@ -42,5 +45,6 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.0
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.0.b2.pom
+/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom
 /usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
+/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom
