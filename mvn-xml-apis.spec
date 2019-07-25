@@ -4,13 +4,16 @@
 #
 Name     : mvn-xml-apis
 Version  : 1.3.04
-Release  : 3
+Release  : 4
 URL      : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
 Source0  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
-Source1  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom
-Source2  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom
-Source3  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar
-Source4  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom
+Source1  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar
+Source2  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom
+Source3  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.pom
+Source4  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom
+Source5  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar
+Source6  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom
+Source7  : https://repo1.maven.org/maven2/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -33,19 +36,28 @@ data components for the mvn-xml-apis package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.03
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.01
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.01
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.01
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.01
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/2.0.2
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.pom
 
 
 %files
@@ -53,8 +65,11 @@ cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.0
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar
 /usr/share/java/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom
+/usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.pom
 /usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
 /usr/share/java/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom
 /usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar
 /usr/share/java/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom
+/usr/share/java/.m2/repository/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.pom
