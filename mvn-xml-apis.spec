@@ -4,7 +4,7 @@
 #
 Name     : mvn-xml-apis
 Version  : 1.3.04
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
 Source0  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
 Source1  : https://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar
